@@ -14,12 +14,13 @@ class App extends Component {
     }
   }
 
-  // form methods
+  //form methods
   updateSearch = event => {
     this.setState({
       searchInput: event.target.value
     })
   }
+
 
   // life cycle methods
   componentDidMount() {
@@ -41,16 +42,17 @@ class App extends Component {
           return player.name.includes(this.state.searchInput)
         })
       })
+      this.props.setDataRendered(this.state.dataToRender)
     }
   }
 
   render() {
     return (
       <div className="App">
-        <h1 datatest-id="">Women's World Cup Data</h1>
-        <SearchBar updateSearch={this.updateSearch} searchInput={this.state.searchInput}/>
+        <h1 datatest-id="h1">Women's World Cup Data</h1>
+        <SearchBar updateSearch={this.updateSearch} data={this.state.data} searchInput={this.state.searchInput}/>
         <div className="playerCardContainer">
-          {this.state.dataToRender.map(player => {
+          {this.props.dataRendered.map(player => {
             return <PlayerCard data-testid={player.name} player={player} key={player.id} />
           })}
         </div>

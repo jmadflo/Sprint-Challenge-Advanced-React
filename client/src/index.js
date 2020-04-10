@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import useLocalStorage from './hooks/useLocalStorage'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const AppWrapper = () => {
+    const [dataRendered, setDataRendered] = useLocalStorage('dataRendered', [])
+    return (
+        <App dataRendered={dataRendered} setDataRendered={setDataRendered}/>
+    )
+}
+
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
