@@ -19,3 +19,11 @@
 ul {
   text-align: left;
 }
+
+form {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 120px;
+}

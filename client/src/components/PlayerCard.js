@@ -6,9 +6,9 @@ const PlayerCard = props => {
         <div className='PlayerCard'>
             <h3>{name}</h3>
             <ul>
-                <li>{country}</li>
-                <li>{searches}</li>
-                <li>{id}</li>
+                <li>Country: {country}</li>
+                <li>Number of searches: {searches}</li>
+                <li>Id: {id}</li>
             </ul>
         </div>
     )
