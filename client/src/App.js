@@ -32,6 +32,7 @@ class App extends Component {
           dataToRender: response.data
         })
         console.log(this.state)
+        this.props.setDataRendered(this.state.dataToRender)
       })
   }
 
