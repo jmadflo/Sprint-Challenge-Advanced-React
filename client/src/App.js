@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import PlayerList from './components/PlayerList'
-import SearchBar from './components/SearchBar'
 import './App.css'
 
 class App extends Component {
@@ -32,7 +31,7 @@ class App extends Component {
           dataToRender: response.data
         })
         console.log(this.state)
-        this.props.setDataRendered(this.state.dataToRender)
+        // this.props.setDataRendered(this.state.dataToRender)
       })
   }
 

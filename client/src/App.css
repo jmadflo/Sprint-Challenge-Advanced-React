@@ -27,3 +27,19 @@ form {
 input {
   width: 120px;
 }
+
+button {
+  color: red;
+  background: green;
+  height: 40px;
+  width: 100px;
+  font-size: 1rem;
+}
+
+h1 {
+  color: red;
+}
+
+.dark-mode {
+  background-color: black;
+}
