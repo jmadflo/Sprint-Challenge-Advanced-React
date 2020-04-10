@@ -1,3 +1,21 @@
 .App {
   text-align: center;
 }
+
+.playerCardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.PlayerCard {
+  width: 30%;
+  margin-bottom: 20px;
+  color: red;
+  border: 2px red solid;
+  border-radius: 10px;
+}
+
+ul {
+  text-align: left;
+}
