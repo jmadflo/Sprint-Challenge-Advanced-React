@@ -5,7 +5,7 @@ import App from './App';
 import useLocalStorage from './hooks/useLocalStorage'
 import * as serviceWorker from './serviceWorker';
 
-const AppWrapper = () => {
+export const AppWrapper = () => {
     const [dataRendered, setDataRendered] = useLocalStorage('dataRendered', [])
     return (
         <App dataRendered={dataRendered} setDataRendered={setDataRendered}/>

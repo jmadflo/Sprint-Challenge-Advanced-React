@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import PlayerCard from './components/PlayerCard'
+import PlayerList from './components/PlayerList'
 import SearchBar from './components/SearchBar'
 import './App.css'
 
@@ -50,12 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 datatest-id="h1">Women's World Cup Data</h1>
-        <SearchBar updateSearch={this.updateSearch} data={this.state.data} searchInput={this.state.searchInput}/>
-        <div className="playerCardContainer">
-          {this.props.dataRendered.map(player => {
-            return <PlayerCard data-testid={player.name} player={player} key={player.id} />
-          })}
-        </div>
+        <PlayerList dataRendered={this.props.dataRendered} updateSearch={this.updateSearch} data={this.state.data} searchInput={this.state.searchInput}/>
       </div>
     )
   }
