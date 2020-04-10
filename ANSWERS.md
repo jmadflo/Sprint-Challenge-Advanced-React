@@ -8,7 +8,7 @@ componentDidMount: Runs right after the component renders for the first time. Th
 
 componentDidUpdate: Takes previousProps and previousState as arguments and runs everytime the component's props or state are changed. It is important to wrap statements here in if-statements in order to prevent infinite loops.
 
-componentDidUnmount: Runs after component unmounts and is the place to do any code cleanup that one needs to do once the component is removed. This is a bad place to do any change of state as the component will not be rerendering again.
+componentDidUnmount: Runs after component unmounts and is the place to do any code cleanup that one needs to do once the component is removed. This is a bad place to do any change of state because the component will not be rerendering again.
 
 - [ ] What is the purpose of a custom hook?
 
